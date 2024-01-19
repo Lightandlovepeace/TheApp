@@ -1,30 +1,55 @@
 {
   "expo": {
-    "name": "theApp",
-    "slug": "theApp",
-    "version": "1.0.0",
+    "name": "lightandlovetribe",
+    "owner": "lightandlovetribe",
+    "slug": "doApp-432Hz",
+    "version": "1.5.2",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/mandala.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash_screen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.markcash11.Solfeggiomusicplayer"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.markcash11.Solfeggiomusicplayer",
+      "versionCode": 20
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "487b08ab-4d87-451f-82f1-5dcf7741343a"
+      }
+    },
+    "plugins": [
+      [
+        "@config-plugins/react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": [
+            "peripheral",
+            "central"
+          ],
+          "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to connect to bluetooth devices"
+        }
+      ],
+      "sentry-expo"
+    ]
   }
 }
